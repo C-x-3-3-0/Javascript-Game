@@ -158,17 +158,14 @@ function animate() {
         player.isAttacking = false
         console.log('go');
     }
-
-}
-
-if( rectangularCollision({
-    rectangle1: enemy,
-    rectangle2: player
-}) &&
-    enemy.isAttacking) {
-    enemy.isAttacking = false
-    console.log('enemy attack successful');
-}
+    if( rectangularCollision({
+        rectangle1: enemy,
+        rectangle2: player
+    }) &&
+        enemy.isAttacking) {
+        enemy.isAttacking = false
+        console.log('enemy attack successful');
+    }
 
 
 
